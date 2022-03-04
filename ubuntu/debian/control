@@ -35,6 +35,7 @@ Depends: libignition-transport11 (= ${binary:Version}),
          libignition-tools-dev,
          libignition-utils1-cli-dev,
          libignition-utils1-dev,
+         ${shlibs:Depends},
          ${misc:Depends}
 Breaks: libignition-transport-dev (<= 11.0.0+ds-3),
         ignition-transport-cli (<= 11.0.0+ds-3)
