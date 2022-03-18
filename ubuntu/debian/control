@@ -1,5 +1,4 @@
 Source: ignition-transport11
-Standards-Version: 3.9.4
 Maintainer: Jose Luis Rivero <jrivero@osrfoundation.org>
 Section: science
 Priority: extra
@@ -12,7 +11,7 @@ Build-Depends: cmake,
                libprotoc-dev,
                libprotobuf-dev,
                libignition-msgs8-dev,
-               libignition-cmake2-dev,
+               libignition-cmake2-dev (>= 2.8.0) | libignition-cmake-dev (>= 2.8.0),
                libignition-tools-dev,
                libignition-utils1-cli-dev,
                libignition-utils1-dev,
@@ -20,8 +19,9 @@ Build-Depends: cmake,
                uuid-dev,
                libzmq3-dev (>= 3.0.0),
                libsqlite3-dev
-Vcs-Browser: https://github.org/ignition-relase/ign-transport11-release
+Vcs-Browser: https://github.com/ignitionrobotics/ignition-transport
 Vcs-Git: https://github.org/ignition-relase/ign-transport11-release
+Standards-Version: 4.5.1
 Homepage: https://github.com/ignition-release/ign-transport
 
 Package: libignition-transport11-core-dev
@@ -35,9 +35,24 @@ Depends: libignition-transport11 (= ${binary:Version}),
          libignition-tools-dev,
          libignition-utils1-cli-dev,
          libignition-utils1-dev,
+         ${shlibs:Depends},
          ${misc:Depends}
+Breaks: libignition-transport-dev (<= 11.0.0+ds-3),
+        ignition-transport-cli (<= 11.0.0+ds-3)
+Replaces: libignition-transport-dev (<= 11.0.0+ds-3),
+        ignition-transport-cli (<= 11.0.0+ds-3)
 Multi-Arch: same
 Description: Ignition Robotics transport Library - Core Dev files
+ Ignition transport library combines ZeroMQ with Protobufs to create a fast and
+ efficient message passing system. Asynchronous message publication and
+ subscription is provided along with service calls and discovery.
+ .
+ Ignition Robotics is a set of simple libraries that provide useful
+ functionality to bootstrap robot applications. The included libraries
+ encapsulate all the essentials, such as common math data types, console
+ logging, 3D mesh management, and asynchronous message passing.
+ .
+ The package ships the ignition transport core development files
 
 Package: libignition-transport11
 Architecture: any
@@ -45,7 +60,19 @@ Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
+Breaks: libignition-transport11-11 (<= 11.0.0+ds-3)
+Replaces: libignition-transport11-11 (<= 11.0.0+ds-3)
 Description: Ignition Robotics Transport Library - Shared library
+ Ignition transport library combines ZeroMQ with Protobufs to create a fast and
+ efficient message passing system. Asynchronous message publication and
+ subscription is provided along with service calls and discovery.
+ .
+ Ignition Robotics is a set of simple libraries that provide useful
+ functionality to bootstrap robot applications. The included libraries
+ encapsulate all the essentials, such as common math data types, console
+ logging, 3D mesh management, and asynchronous message passing.
+ .
+ The package ships the ignition transport libraries
 
 Package: libignition-transport11-log-dev
 Architecture: any
@@ -56,7 +83,19 @@ Depends: libsqlite3-dev,
          libignition-transport11-log (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
+Breaks: libignition-transport-dev (<= 11.0.0+ds-3)
+Replaces: libignition-transport-dev (<= 11.0.0+ds-3)
 Description: Ignition Robotics transport Library - Core Dev
+ Ignition transport library combines ZeroMQ with Protobufs to create a fast and
+ efficient message passing system. Asynchronous message publication and
+ subscription is provided along with service calls and discovery.
+ .
+ Ignition Robotics is a set of simple libraries that provide useful
+ functionality to bootstrap robot applications. The included libraries
+ encapsulate all the essentials, such as common math data types, console
+ logging, 3D mesh management, and asynchronous message passing.
+ .
+ The package ships the ignition core development libraries
 
 Package: libignition-transport11-log
 Architecture: any
@@ -65,6 +104,16 @@ Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
 Description: Ignition Robotics Transport Library - Log Shared library
+ Ignition transport library combines ZeroMQ with Protobufs to create a fast and
+ efficient message passing system. Asynchronous message publication and
+ subscription is provided along with service calls and discovery.
+ .
+ Ignition Robotics is a set of simple libraries that provide useful
+ functionality to bootstrap robot applications. The included libraries
+ encapsulate all the essentials, such as common math data types, console
+ logging, 3D mesh management, and asynchronous message passing.
+ .
+ The package ships the log shared library
 
 Package: libignition-transport11-dev
 Architecture: any
@@ -73,7 +122,19 @@ Depends: libignition-transport11-core-dev (= ${binary:Version}),
          libignition-transport11-log-dev (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
+Breaks: libignition-transport-dev (<= 11.0.0+ds-3)
+Replaces: libignition-transport-dev (<= 11.0.0+ds-3)
 Description: Ignition Robotics transport Library - Metapackage
+ Ignition transport library combines ZeroMQ with Protobufs to create a fast and
+ efficient message passing system. Asynchronous message publication and
+ subscription is provided along with service calls and discovery.
+ .
+ Ignition Robotics is a set of simple libraries that provide useful
+ functionality to bootstrap robot applications. The included libraries
+ encapsulate all the essentials, such as common math data types, console
+ logging, 3D mesh management, and asynchronous message passing.
+ .
+ The is a metapackage for all development files
 
 Package: libignition-transport11-dbg
 Architecture: any
@@ -84,3 +145,13 @@ Depends:
      ${misc:Depends}
 Multi-Arch: same
 Description: Ignition Robotics transport Library - Debugging symbols
+ Ignition transport library combines ZeroMQ with Protobufs to create a fast and
+ efficient message passing system. Asynchronous message publication and
+ subscription is provided along with service calls and discovery.
+ .
+ Ignition Robotics is a set of simple libraries that provide useful
+ functionality to bootstrap robot applications. The included libraries
+ encapsulate all the essentials, such as common math data types, console
+ logging, 3D mesh management, and asynchronous message passing.
+ .
+ The package ships the debugging symbols
