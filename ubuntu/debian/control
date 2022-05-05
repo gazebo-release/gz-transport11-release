@@ -115,11 +115,20 @@ Description: Ignition Robotics Transport Library - Log Shared library
  .
  The package ships the log shared library
 
+Package: ignition-transport11-cli
+Architecture: any
+Depends: libignition-transport11 (= ${binary:Version}),
+         ${shlibs:Depends},
+         ${misc:Depends}
+Multi-Arch: no
+Description: Ignition Robotics transport Library - Metapackage
+
 Package: libignition-transport11-dev
 Architecture: any
 Section: libdevel
 Depends: libignition-transport11-core-dev (= ${binary:Version}),
          libignition-transport11-log-dev (= ${binary:Version}),
+         Ignition-transport11-cli,
          ${misc:Depends}
 Multi-Arch: same
 Breaks: libignition-transport-dev (<= 11.0.0+ds-3)
