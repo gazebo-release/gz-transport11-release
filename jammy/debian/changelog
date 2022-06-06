@@ -1,3 +1,9 @@
+ignition-transport11 (11.1.0-1~jammy) jammy; urgency=medium
+
+  * ignition-transport11 11.1.0-1 release
+
+ -- Louise Poubel <louise@openrobotics.org>  Mon, 06 Jun 2022 10:00:14 -0700
+
 ignition-transport11 (11.0.0+osrf-1~jammy) jammy; urgency=medium
 
   * First release for jammy
