@@ -128,7 +128,7 @@ Architecture: any
 Section: libdevel
 Depends: libignition-transport11-core-dev (= ${binary:Version}),
          libignition-transport11-log-dev (= ${binary:Version}),
-         Ignition-transport11-cli,
+         ignition-transport11-cli,
          ${misc:Depends}
 Multi-Arch: same
 Breaks: libignition-transport-dev (<= 11.0.0+ds-3)
