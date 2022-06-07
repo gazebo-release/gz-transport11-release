@@ -121,7 +121,17 @@ Depends: libignition-transport11 (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends}
 Multi-Arch: no
-Description: Ignition Robotics transport Library - Metapackage
+Description: Ignition Robotics transport Library - CLI
+ Ignition transport library combines ZeroMQ with Protobufs to create a fast and
+ efficient message passing system. Asynchronous message publication and
+ subscription is provided along with service calls and discovery.
+ .
+ Ignition Robotics is a set of simple libraries that provide useful
+ functionality to bootstrap robot applications. The included libraries
+ encapsulate all the essentials, such as common math data types, console
+ logging, 3D mesh management, and asynchronous message passing.
+ .
+ The package ships the CLI.
 
 Package: libignition-transport11-dev
 Architecture: any
