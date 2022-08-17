@@ -174,3 +174,59 @@ Description: Gazebo transport Library - Debugging symbols
  logging, 3D mesh management, and asynchronous message passing.
  .
  The package ships the debugging symbols
+
+Package: libgz-transport11-core-dev
+Depends: libignition-transport11-core-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
+
+Package: libgz-transport11
+Depends: libignition-transport11 (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
+
+Package: libgz-transport11-log-dev
+Depends: libignition-transport11-log-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
+
+Package: libgz-transport11-log
+Depends: libignition-transport11-log (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
+
+Package: libgz-transport11-cli
+Depends: libignition-transport11-cli (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
+
+Package: libgz-transport11-dev
+Depends: libignition-transport11-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
+
+Package: libgz-transport11-dbg
+Depends: libignition-transport11-dbg (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
