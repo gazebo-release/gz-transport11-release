@@ -207,8 +207,8 @@ Section: oldlibs
 Description: transitional package
  It's recommended to use the gz packages going forward.
 
-Package: libgz-transport11-cli
-Depends: libignition-transport11-cli (= ${binary:Version}), ${misc:Depends}
+Package: gz-transport11-cli
+Depends: ignition-transport11-cli (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs
