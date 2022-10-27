@@ -95,7 +95,7 @@ Description: Gazebo transport Library - Core Dev
  encapsulate all the essentials, such as common math data types, console
  logging, 3D mesh management, and asynchronous message passing.
  .
- The package ships the Gazebo core development libraries
+ The package ships the Gazebo transport log development libraries
 
 Package: libignition-transport11-log
 Architecture: any
@@ -114,6 +114,46 @@ Description: Gazebo Transport Library - Log Shared library
  logging, 3D mesh management, and asynchronous message passing.
  .
  The package ships the log shared library
+
+Package: libignition-transport11-parameters-dev
+Architecture: any
+Section: libdevel
+Depends: libignition-cmake2-dev (>= 2.13.0),
+         libignition-transport11-core-dev (= ${binary:Version}),
+         libignition-transport11-parameters (= ${binary:Version}),
+         ${misc:Depends}
+Multi-Arch: same
+Breaks: libignition-transport-dev (<= 11.0.0+ds-3)
+Replaces: libignition-transport-dev (<= 11.0.0+ds-3)
+Description: Gazebo transport Library - Core Dev
+ Gazebo transport library combines ZeroMQ with Protobufs to create a fast and
+ efficient message passing system. Asynchronous message publication and
+ subscription is provided along with service calls and discovery.
+ .
+ Gazebo is a set of simple libraries that provide useful
+ functionality to bootstrap robot applications. The included libraries
+ encapsulate all the essentials, such as common math data types, console
+ logging, 3D mesh management, and asynchronous message passing.
+ .
+ The package ships the Gazebo transport parameters development libraries
+
+Package: libignition-transport11-parameters
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
+Description: Gazebo Transport Library - Log Shared library
+ Gazebo transport library combines ZeroMQ with Protobufs to create a fast and
+ efficient message passing system. Asynchronous message publication and
+ subscription is provided along with service calls and discovery.
+ .
+ Gazebo is a set of simple libraries that provide useful
+ functionality to bootstrap robot applications. The included libraries
+ encapsulate all the essentials, such as common math data types, console
+ logging, 3D mesh management, and asynchronous message passing.
+ .
+ The package ships the Gazebo transport parameters shared library
 
 Package: ignition-transport11-cli
 Architecture: any
@@ -138,6 +178,7 @@ Architecture: any
 Section: libdevel
 Depends: libignition-transport11-core-dev (= ${binary:Version}),
          libignition-transport11-log-dev (= ${binary:Version}),
+         libignition-transport11-parameters-dev (= ${binary:Version}),
          ignition-transport11-cli,
          ${misc:Depends}
 Multi-Arch: same
@@ -201,6 +242,22 @@ Description: transitional package
 
 Package: libgz-transport11-log
 Depends: libignition-transport11-log (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
+
+Package: libgz-transport11-parameters-dev
+Depends: libignition-transport11-parameters-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
+
+Package: libgz-transport11-parameters
+Depends: libignition-transport11-parameters (= ${binary:Version}), ${misc:Depends}
 Architecture: all
 Priority: optional
 Section: oldlibs

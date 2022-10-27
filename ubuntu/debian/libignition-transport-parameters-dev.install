@@ -1,0 +1,5 @@
+usr/include/ignition/transport*/ignition/transport/parameters.hh
+usr/include/ignition/transport*/ignition/transport/parameters/*
+usr/lib/*/cmake/ignition-transport[0-9][0-9]-parameters/*
+usr/lib/*/libignition-transport[0-9][0-9]-parameters.so
+usr/lib/*/pkgconfig/ignition-transport[0-9][0-9]-parameters.pc
